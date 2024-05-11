@@ -1,0 +1,86 @@
+Fri May 10 13:04:24 UTC 2024
+System is configured for timezone : UTC
+================================================================================
+Current configuration:
+!
+!Version ArubaOS-CX Virtual.10.06.0001
+!export-password: default
+hostname SW7
+user admin group administrators password ciphertext AQBapTDiz6tWQJ5hHEZKAGPBVfUsILpQP+Cm0cUM6dSDZ5u+YgAAAJBXBKsJN02iDvesVmJ1lip4fIFBqu7K4sxKYLq/G8bn/snM8VPGDhi0QGfE5YV+GVAkEXnGE+99HholILGilKKy+X4xLb3yb+hEGQC+swsUGHAMNqWGlCVTedF7CIDuuB47
+led locator on
+ntp server pool.ntp.org minpoll 4 maxpoll 4 iburst
+ntp enable
+!
+!
+!
+!
+ssh server vrf default
+ssh server vrf mgmt
+vlan 1-2,10,20
+interface mgmt
+    no shutdown
+    ip dhcp
+interface 1/1/1
+    no shutdown
+    no routing
+    vlan access 1
+interface vlan 1
+    ip address 192.168.1.7/24
+interface vlan 2
+    ip address 10.0.0.8/24
+interface vlan 10
+    ip address 10.10.10.7/24
+interface vlan 20
+    ip address 10.20.0.7/24
+ip route 0.0.0.0/0 192.168.1.254
+ip dns server-address 2.2.2.2
+!
+!
+!
+!
+!
+https-server vrf mgmt
+################################################################################
+Fri May 10 13:07:58 UTC 2024
+System is configured for timezone : UTC
+================================================================================
+Current configuration:
+!
+!Version ArubaOS-CX Virtual.10.06.0001
+!export-password: default
+hostname SW7
+user admin group administrators password ciphertext AQBapTDiz6tWQJ5hHEZKAGPBVfUsILpQP+Cm0cUM6dSDZ5u+YgAAAJBXBKsJN02iDvesVmJ1lip4fIFBqu7K4sxKYLq/G8bn/snM8VPGDhi0QGfE5YV+GVAkEXnGE+99HholILGilKKy+X4xLb3yb+hEGQC+swsUGHAMNqWGlCVTedF7CIDuuB47
+led locator on
+ntp server pool.ntp.org minpoll 4 maxpoll 4 iburst
+ntp enable
+!
+!
+!
+!
+ssh server vrf default
+ssh server vrf mgmt
+vlan 1-2,10,20
+interface mgmt
+    no shutdown
+    ip dhcp
+interface 1/1/1
+    no shutdown
+    no routing
+    vlan access 1
+interface vlan 1
+    ip address 192.168.1.7/24
+interface vlan 2
+    ip address 10.0.0.8/24
+interface vlan 10
+    ip address 10.10.10.7/24
+interface vlan 20
+    ip address 10.20.0.7/24
+ip route 0.0.0.0/0 192.168.1.254
+ip dns server-address 2.2.2.2
+!
+!
+!
+!
+!
+https-server vrf mgmt
+################################################################################
