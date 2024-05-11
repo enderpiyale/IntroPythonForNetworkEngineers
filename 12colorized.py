@@ -1,6 +1,6 @@
 import netmiko
 from time import time
-from rich import print
+from rich import print, pretty
 
 username = 'admin'
 password = 'Netsys'
